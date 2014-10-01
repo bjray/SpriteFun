@@ -16,7 +16,7 @@
         extension = @"sks";
     }
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:baseName ofType:@"sks"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:baseName ofType:extension];
     SKEmitterNode *node = (id)[NSKeyedUnarchiver unarchiveObjectWithFile:path];
     return node;
 }

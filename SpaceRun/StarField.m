@@ -54,7 +54,7 @@
     if (!self.galaxyExits) {
         u_int32_t dice = arc4random_uniform(100);
         if (dice < 15) {
-            CGFloat quarterX = self.scene.size.width / 4;
+//            CGFloat quarterX = self.scene.size.width / 4;
             CGFloat sideSize = 50 + arc4random_uniform(450);
             CGFloat maxX = self.scene.size.width;
             CGFloat randX = arc4random_uniform(maxX);

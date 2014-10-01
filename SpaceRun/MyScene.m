@@ -9,7 +9,8 @@
 #define kSHOT_TIME 0.5
 #define kPHOTON_SPEED 0.5
 
-#define kOBSTACLE_FREQUENCY 15
+#define kOBSTACLE_FREQUENCY_EASY 15
+#define kOBSTACLE_FREQUENCY_HARD 30
 #define kASTEROID_MIN_SPEED 3
 #define kASTEROID_SPEED_DELTA 4
 
@@ -89,7 +90,14 @@
         
     }
     
-    if (arc4random_uniform(1000) <= kOBSTACLE_FREQUENCY) {
+    NSInteger thingProbability;
+    if (self.easyMode) {
+        thingProbability = kOBSTACLE_FREQUENCY_EASY;
+    } else {
+        thingProbability = kOBSTACLE_FREQUENCY_HARD;
+    }
+    
+    if (arc4random_uniform(1000) <= thingProbability) {
         [self launchObstacle];
     }
     
@@ -236,6 +244,7 @@
             explosion.position = ship.position;
             [explosion rcw_dieOutInDuration:0.3];
             [self addChild:explosion];
+            [self endGame];
         }
         [self enumerateChildNodesWithName:@"photon" usingBlock:^(SKNode *photon, BOOL *stop) {
             if ([photon intersectsNode:obstacle]) {
@@ -296,6 +305,11 @@
     [bezierPath addCurveToPoint: CGPointMake(-2.5, -644.5) controlPoint1: CGPointMake(-5.2, -578.93) controlPoint2: CGPointMake(-2.5, -644.5)];
     
     return bezierPath.CGPath;
+}
+
+- (void)endGame {
+    NSAssert(self.endGameCallback, @"Forgot to send endFameCallback");
+    self.endGameCallback();
 }
 
 @end

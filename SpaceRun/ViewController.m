@@ -21,8 +21,14 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
+    MyScene* scene = [MyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.easyMode = self.easyMode;
+    
+    __weak ViewController *weakSelf = self;
+    scene.endGameCallback = ^ {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    };
     
     // Present the scene.
     [skView presentScene:scene];

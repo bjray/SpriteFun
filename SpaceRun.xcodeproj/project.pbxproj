@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F46D6B219D4B8750063D61D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F46D6B119D4B8750063D61D /* MenuViewController.m */; };
+		2F46D6B319D4B8750063D61D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F46D6B119D4B8750063D61D /* MenuViewController.m */; };
 		B6861B491998570E000D8A35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6861B481998570E000D8A35 /* Foundation.framework */; };
 		B6861B4B1998570E000D8A35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6861B4A1998570E000D8A35 /* CoreGraphics.framework */; };
 		B6861B4D1998570E000D8A35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6861B4C1998570E000D8A35 /* UIKit.framework */; };
@@ -68,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F46D6B019D4B8750063D61D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		2F46D6B119D4B8750063D61D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		B6861B451998570E000D8A35 /* SpaceRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6861B481998570E000D8A35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B6861B4A1998570E000D8A35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -178,6 +182,8 @@
 				B6861B5C1998570E000D8A35 /* Main.storyboard */,
 				B6861B5F1998570E000D8A35 /* ViewController.h */,
 				B6861B601998570E000D8A35 /* ViewController.m */,
+				2F46D6B019D4B8750063D61D /* MenuViewController.h */,
+				2F46D6B119D4B8750063D61D /* MenuViewController.m */,
 				B6861B621998570E000D8A35 /* MyScene.h */,
 				B6861B631998570E000D8A35 /* MyScene.m */,
 				B6C8D5A3199E81EA0069ACDD /* StarField.h */,
@@ -386,6 +392,7 @@
 				B6C8D5A5199E81EA0069ACDD /* StarField.m in Sources */,
 				B6861B611998570E000D8A35 /* ViewController.m in Sources */,
 				B6861B5B1998570E000D8A35 /* AppDelegate.m in Sources */,
+				2F46D6B219D4B8750063D61D /* MenuViewController.m in Sources */,
 				B6C8D5C4199E95230069ACDD /* SKEmitterNode+Extensions.m in Sources */,
 				B6861B571998570E000D8A35 /* main.m in Sources */,
 			);
@@ -398,6 +405,7 @@
 				B6C8D5A6199E81EA0069ACDD /* StarField.m in Sources */,
 				B6C8D5C5199E95230069ACDD /* SKEmitterNode+Extensions.m in Sources */,
 				B6861B7B1998570E000D8A35 /* SpaceRunTests.m in Sources */,
+				2F46D6B319D4B8750063D61D /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
